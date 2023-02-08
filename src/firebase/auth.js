@@ -33,7 +33,7 @@ export async function login(email, password) {
             window.alert("No account exists for this email address");
         }
         else {
-            windows.alert("Invalid Password");
+            window.alert("Invalid Password");
         }
     }
 }
