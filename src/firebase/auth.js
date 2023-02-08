@@ -14,7 +14,7 @@ export async function createAccount(email, password) {
         if(errorCode=='auth/email-already-in-use'){
             window.alert("Email already Exists");
         }
-        else if(errorCode=='auth/weak-password'){
+        else{
             window.alert("Please enter a Strong Password");
         }
     }
@@ -28,7 +28,13 @@ export async function login(email, password) {
     catch (error) {
         const errorCode = error.code;
         const errorMessage = error.message;
-        window.alert("Wrong Password");
+        console.log(errorCode,errorMessage);
+        if(errorCode=='auth/user-not-found'){
+            window.alert("No account exists for this email address");
+        }
+        else {
+            windows.alert("Invalid Password");
+        }
     }
 }
 
