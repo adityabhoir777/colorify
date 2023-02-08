@@ -45,7 +45,7 @@ function Login({ setActiveUser }) {
     return (
         <div className="login">
             <span>colorify</span>
-            <input placeholder="username" value={username} onChange={(e) => setUsername(e.target.value)} />
+            <input placeholder="email" value={username} onChange={(e) => setUsername(e.target.value)} />
             <input placeholder="password" value={password} type={"password"} onChange={(e) => setPassword(e.target.value)} />
             <div>
                 <button id="signUp" onClick={handleCreate}>Sign Up</button>
